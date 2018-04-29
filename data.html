@@ -47,17 +47,24 @@ var rows = data.split("\n");
 rows.forEach( function getvalues(ourrow) {
 
 // start a table row
-html += "<tr>";
+  html += "<tr>";
 
-// split line into columns
+  // split line into columns
 var columns = ourrow.split(",");
 
 html += "<td>" + columns[0] + "</td>";
 html += "<td>" + columns[1] + "</td>";
 html += "<td>" + columns[2] + "</td>";
+html += "<td>" + columns[0] + "</td>";
+html += "<td>" + columns[1] + "</td>";
+html += "<td>" + columns[2] + "</td>";
+html += "<td>" + columns[0] + "</td>";
+html += "<td>" + columns[1] + "</td>";
+html += "<td>" + columns[2] + "</td>";
+html += "<td>" + columns[0] + "</td>";
 
 // close row
-html += "</tr>";
+  html += "</tr>";
 })
 // close table
 html += "</table>";
