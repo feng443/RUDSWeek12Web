@@ -1,19 +1,20 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="import" href="shared.html">    
+    <link rel="import" href="shared.html">
     <title>Latitude Analytics</title>
 
-  </head>
-  <body>
-    <div class="container" id='main_body'>
-      <script>
+</head>
+<body>
+<div class="container" id='main_body'>
+    <script>
           var link = document.querySelector('link[rel="import"]');
           var content = link.import;
       
@@ -21,24 +22,39 @@
           var el = content.querySelector('.shared_header');
       
           document.getElementById('main_body').appendChild(el.cloneNode(true));
-        </script>
+
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
 
     <!-- <a id="ddmenuLink" href="header.html"></a> -->
 
-      <div class="row" id='main'>
+    <div class="row" id='main'>
         <div class="col-sm-12 col-lg-8">
-         <h1>Summary: Latitude vs. X</h1>
-         <img src='img/weather_max_temperature.png' class='summary_img'> 
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-         </p>
-         </div>
+            <h1>Summary: Latitude vs. X</h1>
+            <img src='img/weather_max_temperature.png' class='summary_img'>
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator.
+                To accomplish this analysis, we first pulled data from OpenWeatherMap API to assemble a dataset over 50
+                cities.
+            </p>
+            <p>After assembiling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
+                Factors we looked at include: temperature, cloudiness, wind speed and humidity.
+
+                This site provides the source data and visulizations created as part of the analysis,
+                as well as explnations and descriptions of any trends and correlations witnessed.
+            </p>
+        </div>
         <script>
             var link = document.querySelector('link[rel="import"]');
             var content = link.import;
@@ -46,18 +62,20 @@
             // Grab DOM from warning.html's document.
             var el = content.querySelector('.shared_viz');
             document.getElementById('main').appendChild(el.cloneNode(true));
-          </script>
-       </div>
 
-       </div> <!-- Container-->
+        </script>
+    </div>
 
-      <script>
+</div> <!-- Container-->
+
+<script>
           var link = document.querySelector('link[rel="import"]');
           var content = link.import;
       
           // Grab DOM from warning.html's document.
           var el = content.querySelector('.shared_footer');
           document.body.appendChild(el.cloneNode(true));
-        </script>
-      
+
+</script>
+
 </html>

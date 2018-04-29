@@ -25,9 +25,14 @@ container {
     right: 0;
 }
 
-@media only screen and (min-width: 480px){
-    .mr_auto {
+@media only screen and (max-width: 992px){
+    .mr-auto {
         position: static;
+    }
+
+    .contrainer {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
