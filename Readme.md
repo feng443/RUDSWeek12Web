@@ -2,7 +2,14 @@
 
 http://github.chanfeng.com/RUDSWeek12Web/
 
-**Note**: Since I used html import, so footer and header can be shared across pages, the footer and header might not work in FireFox. I tested with Chrome. 
-In a production environment, the code need to be compatible with more browsers.
+**Note**: I used html imports, so footer and header can be shared across pages. 
+This however make the header and footer not working in Firefox. Please use Chrome.
+In a production environment, server side inclusion will has full browser compatibility.
+
+For table, I used JavaScript to load CSV file into table. On a production environment, if the data
+do not change frequently, a parser could be writen to convert the CSV file to a HTML snippet then included.
+
+
+ 
 
 
