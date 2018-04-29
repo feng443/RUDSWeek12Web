@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="import" href="shared.html">    
+    <link rel="import" href="header_footer.html">    
     <title>Latitude Analytics</title>
 
   </head>
@@ -30,25 +30,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-    <!-- <a id="ddmenuLink" href="header.html"></a> -->
+    <a id="ddmenuLink" href="header.html"></a>
 
-      <div class="row" id='main'>
+      <div class="row">
         <div class="col-sm-12 col-lg-8">
-         <h1>Summary: Latitude vs. Max Temperature</h1>
+         <h1>Summary: Latitude vs. X</h1>
          <img src='img/weather_max_temperature.png' class='summary_img'> 
          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
          </p>
-         </div>
-        <script>
-            var link = document.querySelector('link[rel="import"]');
-            var content = link.import;
-        
-            // Grab DOM from warning.html's document.
-            var el = content.querySelector('.shared_viz');
-            document.getElementById('main').appendChild(el.cloneNode(true));
-          </script>
-       </div>
+        </div>
 
+        <div class="col-sm-12 col-lg-4">
+          <h2>Visualization</h2>
+          <div class="row">
+          <div class="col-sm-3 col-lg-6"> 
+          <img src='img/weather_max_temperature.png'>
+          </div>
+          <div class="col-sm-3 col-lg-6"> 
+              <img src='img/humidity.png'>
+              </div>
+              <div class="col-sm-3 col-lg-6"> 
+                  <img src='img/weather_cloudiness.png'>
+                  </div>
+                  <div class="col-sm-3 col-lg-6"> 
+                      <img src='img/weather_wind_speed.png'>
+                      </div>
+                      </div>
+        </div>
+
+
+      </div>
 
       <script>
           var link = document.querySelector('link[rel="import"]');
