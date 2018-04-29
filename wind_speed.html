@@ -13,6 +13,7 @@
   </head>
   <body>
 
+    <div class='container' id='main_body'>
       <script>
           var link = document.querySelector('link[rel="import"]');
           var content = link.import;
@@ -20,7 +21,7 @@
           // Grab DOM from warning.html's document.
           var el = content.querySelector('.shared_header');
       
-          document.body.appendChild(el.cloneNode(true));
+          document.getElementById('main_body').appendChild(el.cloneNode(true));
         </script>
 
     <!-- Optional JavaScript -->
@@ -49,6 +50,7 @@
           </script>
        </div>
 
+</div>
 
       <script>
           var link = document.querySelector('link[rel="import"]');

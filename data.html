@@ -13,6 +13,7 @@
   </head>
   <body>
 
+      <div class='container' id='main_body'>
       <script>
           var link = document.querySelector('link[rel="import"]');
           var content = link.import;
@@ -20,7 +21,7 @@
           // Grab DOM from warning.html's document.
           var el = content.querySelector('.shared_header');
       
-          document.body.appendChild(el.cloneNode(true));
+          document.getElementById('main_body').appendChild(el.cloneNode(true));
         </script>
 
     <!-- Optional JavaScript -->
@@ -44,6 +45,7 @@ var html = '<table>';
 var rows = data.split("\n");
 
 // parse lines
+var line_num = 0;
 rows.forEach( function getvalues(ourrow) {
 
 // start a table row
@@ -51,17 +53,15 @@ rows.forEach( function getvalues(ourrow) {
 
   // split line into columns
 var columns = ourrow.split(",");
-
-html += "<td>" + columns[0] + "</td>";
-html += "<td>" + columns[1] + "</td>";
-html += "<td>" + columns[2] + "</td>";
-html += "<td>" + columns[0] + "</td>";
-html += "<td>" + columns[1] + "</td>";
-html += "<td>" + columns[2] + "</td>";
-html += "<td>" + columns[0] + "</td>";
-html += "<td>" + columns[1] + "</td>";
-html += "<td>" + columns[2] + "</td>";
-html += "<td>" + columns[0] + "</td>";
+var td_or_th = "td";
+if (line_num == 0 ) {
+  td_or_th = "th";
+}
+for (i=0; i<10; i++) {
+  if (columns[1] === undefined) { continue; }
+  html += "<" + td_or_th + ">" + columns[i] + "</" + td_or_th + ">";
+}
+line_num += 1
 
 // close row
   html += "</tr>";
@@ -75,6 +75,7 @@ $('#container').append(html);
 });
     </script>
 
+</div>
       <script>
           var link = document.querySelector('link[rel="import"]');
           var content = link.import;
