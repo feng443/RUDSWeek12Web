@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="import" href="header.html">    
+    <link rel="import" href="header_footer.html">    
     <title>Latitude Analytics</title>
 
   </head>
@@ -61,6 +61,13 @@
 
       </div>
 
-
-      <footer>&copy; Copyright Coding Bootcamp 2018 </footer>
+      <script>
+          var link = document.querySelector('link[rel="import"]');
+          var content = link.import;
+      
+          // Grab DOM from warning.html's document.
+          var el = content.querySelector('.shared_footer');
+          document.body.appendChild(el.cloneNode(true));
+        </script>
+      
 </html>
