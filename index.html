@@ -32,7 +32,7 @@
 
     <!-- <a id="ddmenuLink" href="header.html"></a> -->
 
-      <div class="row">
+      <div class="row" id='main'>
         <div class="col-sm-12 col-lg-8">
          <h1>Summary: Latitude vs. X</h1>
          <img src='img/weather_max_temperature.png' class='summary_img'> 
@@ -45,7 +45,7 @@
         
             // Grab DOM from warning.html's document.
             var el = content.querySelector('.shared_viz');
-            document.body.appendChild(el.cloneNode(true));
+            document.getElementById('main').appendChild(el.cloneNode(true));
           </script>
        </div>
 
