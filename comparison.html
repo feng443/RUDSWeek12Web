@@ -30,36 +30,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-    <a id="ddmenuLink" href="header.html"></a>
+    <h1>Compasison: Latitude vs. X</h1>
+    <p>Click any plot to get an in-depth analysis</p>
 
-      <div class="row">
-        <div class="col-sm-12 col-lg-8">
-         <h1>Summary: Latitude vs. X</h1>
-         <img src='img/weather_max_temperature.png' class='summary_img'> 
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-         </p>
+    <div class='row'>
+        <h1>Comprison: Latitude vs. X</h1>
+        <p>Click any plot to get an in-depth analysis.</p>
+        <div class="row">
+          <div class="col-sm-12 col-lg-6"><a href="max_temperature.html"><img src='img/weather_max_temperature.png'></a></div>
+          <div class="col-sm-12 col-lg-6"><a href='humidity.html'><img src='img/weather_humidity.png'></a></div>
+          <div class="col-sm-12 col-lg-6"><a href='cloudiness.html'><img src="img/weather_cloudiness.png"></a></div>
+          <div class="col-sm-12 col-lg-6"><a href='wind_speed.html'><img src='img/weather_wind_speed.png'></a></div>
         </div>
-
-        <div class="col-sm-12 col-lg-4">
-          <h2>Visualization</h2>
-          <div class="row">
-          <div class="col-sm-3 col-lg-6"> 
-          <img src='img/weather_max_temperature.png'>
-          </div>
-          <div class="col-sm-3 col-lg-6"> 
-              <img src='img/humidity.png'>
-              </div>
-              <div class="col-sm-3 col-lg-6"> 
-                  <img src='img/weather_cloudiness.png'>
-                  </div>
-                  <div class="col-sm-3 col-lg-6"> 
-                      <img src='img/weather_wind_speed.png'>
-                      </div>
-                      </div>
-        </div>
-
-
-      </div>
+    </div>
 
       <script>
           var link = document.querySelector('link[rel="import"]');
