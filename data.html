@@ -28,27 +28,45 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+    <h1>Data</h1>
+    <p>The following table includes all of the data been used for plotting during this project.</p>
 
-    <!-- <a id="ddmenuLink" href="header.html"></a> -->
+    <div id="container"></div>
+    <script>
+    $.get('cities.csv', function(data) {
 
-      <div class="row" id='main'>
-        <div class="col-sm-12 col-lg-8">
-         <h1>Summary: Latitude vs. X</h1>
-         <img src='img/weather_max_temperature.png' class='summary_img'> 
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-         </p>
-         </div>
-        <script>
-            var link = document.querySelector('link[rel="import"]');
-            var content = link.import;
-        
-            // Grab DOM from warning.html's document.
-            var el = content.querySelector('.shared_viz');
-            document.getElementById('main').appendChild(el.cloneNode(true));
-          </script>
-       </div>
+// start the table
+var html = '<table">';
 
+// split into lines
+var rows = data.split("\n");
+
+// parse lines
+rows.forEach( function getvalues(ourrow) {
+
+// start a table row
+html += "<tr>";
+
+// split line into columns
+var columns = ourrow.split(",");
+
+html += "<td>" + columns[0] + "</td>";
+html += "<td>" + columns[1] + "</td>";
+html += "<td>" + columns[2] + "</td>";
+
+// close row
+html += "</tr>";
+})
+// close table
+html += "</table>";
+
+// insert into div
+$('#container').append(html);
+
+});
+    </script>
 
       <script>
           var link = document.querySelector('link[rel="import"]');
